@@ -10,7 +10,8 @@ Overwatch3 is an information app regarding the characters of popular 5v5 fps Ove
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#46A7A1](https://via.placeholder.com/10/f8f8f8?text=+) #46A7A1 |
-| Example Color | ![#6BA3CF](https://via.placeholder.com/10/f8f8f8?text=+) #6BA3CF |
-| Example Color | ![#4B7ECF](https://via.placeholder.com/10/00b48a?text=+) #4B7ECF |
-| Example Color | ![#A5ABBD](https://via.placeholder.com/10/00b48a?text=+) #A5ABBD |
+| Main  Back | ![#6BA3CF](https://via.placeholder.com/10/6BA3CF?text=+) #6BA3CF |
+| Detail Top | ![#46A7A1](https://via.placeholder.com/10/46A7A1?text=+) #46A7A1 |
+| Detail Mid | ![#A5ABBD](https://via.placeholder.com/10/A5ABBD?text=+) #A5ABBD |
+| Detail Bot | ![#4B7ECF](https://via.placeholder.com/10/4B7ECF?text=+) #4B7ECF |
+
