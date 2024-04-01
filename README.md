@@ -15,3 +15,40 @@ Overwatch3 is an information app regarding the characters of popular 5v5 fps Ove
 | Detail Mid | ![#A5ABBD](https://via.placeholder.com/10/A5ABBD?text=+) #A5ABBD |
 | Detail Bot | ![#4B7ECF](https://via.placeholder.com/10/4B7ECF?text=+) #4B7ECF |
 
+## API Reference
+Overwatch3 uses my custom api hosted at http://noshirtpenguin.pythonanywhere.com
+#### Get all heros
+```http
+  GET /api/heros
+```
+#### Get Hero
+
+```http
+  GET /api/heros/{heroname}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `heroname`      | `string` | **Required**. Name of hero to fetch |
+
+#### Get Hero Icon
+
+```http
+  GET /api/heros/{heroname}/Icon
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `heroname`      | `string` | **Required**. Name of hero to fetch |
+
+#### Get Ability Icon
+
+```http
+  GET /api/images/{abilityname}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `abilityname`      | `string` | **Required**. Name of ability to fetch |
+
+
