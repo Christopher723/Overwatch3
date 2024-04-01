@@ -24,7 +24,7 @@ Overwatch3 uses my custom api hosted at http://noshirtpenguin.pythonanywhere.com
 #### Get Hero
 
 ```http
-  GET /api/heros/{heroname}
+  GET /heros/{heroname}
 ```
 
 | Parameter | Type     | Description                       |
@@ -34,7 +34,7 @@ Overwatch3 uses my custom api hosted at http://noshirtpenguin.pythonanywhere.com
 #### Get Hero Icon
 
 ```http
-  GET /api/heros/{heroname}/Icon
+  GET /heros/{heroname}/Icon
 ```
 
 | Parameter | Type     | Description                       |
@@ -44,7 +44,7 @@ Overwatch3 uses my custom api hosted at http://noshirtpenguin.pythonanywhere.com
 #### Get Ability Icon
 
 ```http
-  GET /api/images/{abilityname}
+  GET /images/{abilityname}
 ```
 
 | Parameter | Type     | Description                       |
