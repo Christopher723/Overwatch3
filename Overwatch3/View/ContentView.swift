@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ContentView: View {
     
@@ -25,51 +26,36 @@ struct ContentView: View {
                     LazyVGrid(columns: columns, spacing:20){
                         ForEach(Overwatch.heros) { hero in
                             NavigationLink(destination: HeroDetailView(hero: hero)) {
-                            VStack{
-                                AsyncImage(url: URL(string: "https://noshirtpenguin.pythonanywhere.com/heros/\(hero.name)/Icon")){
-                                    phase in
-                                    switch phase {
-                                    case .empty:
-                                        ProgressView()
-                                    case .success(let image):
-                                        ZStack{
-                                            Rectangle()
-                                                .frame(width: 105, height: 145)
-                                                .foregroundStyle(.white)
-                                            VStack{
-                                                image.resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .frame(maxWidth: 100, maxHeight: 150)
-                                                
-                                                HStack(spacing: 0){
-                                                    AsyncImageView(role: hero.role)
-                                                    Text(hero.name)
-                                                        .scaledToFill()
-                                                        .minimumScaleFactor(0.5)
-                                                        .lineLimit(3)
-                                                        .font(.title2)
-                                                        .bold()
-                                                        .frame(maxWidth: 60)
-                                                        .fixedSize(horizontal: false, vertical: true)
-                                                        
-                                                   
-                                                }
-                                                Spacer()
-                                            }
+                                VStack{
+                                    
+                                    
+                                    ZStack{
+                                        Rectangle()
+                                            .frame(width: 105, height: 145)
+                                            .foregroundStyle(.white)
+                                        VStack{
+                                            KFImage(URL(string: "https://noshirtpenguin.pythonanywhere.com/heros/\(hero.name)/Icon"))
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(maxWidth: 100, maxHeight: 150)
                                             
+                                            HStack(spacing: 0){
+                                                AsyncImageView(role: hero.role)
+                                                Text(hero.name)
+                                                    .scaledToFill()
+                                                    .minimumScaleFactor(0.5)
+                                                    .lineLimit(3)
+                                                    .font(.title2)
+                                                    .bold()
+                                                    .frame(maxWidth: 60)
+                                                    .fixedSize(horizontal: false, vertical: true)
+                                                
+                                                
+                                            }
+                                            Spacer()
                                         }
-                                        
-                                        
-                                    case .failure:
-                                        Image(systemName: "photo")
-                                    @unknown default:
-                                        
-                                        EmptyView()
                                     }
-                                    
-                                    
                                 }
-                            }
                         }.accentColor(Color.black)
                             
                             
@@ -114,5 +100,7 @@ struct AsyncImageView: View {
                 EmptyView()
             }
         }
+        
     }
+    
 }
